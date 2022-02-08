@@ -26,7 +26,7 @@
 import os
 import numpy as np
 
-from distutils.core import setup
+from setuptools import setup
 from pkg_resources import parse_version
 
 from Cython.Distutils import build_ext
@@ -57,6 +57,9 @@ if update_cfg:
 pkgdata = {}
 if os.environ.get('ASTRA_INSTALL_LIBRARY_AS_DATA', ''):
     pkgdata['astra'] = [os.environ['ASTRA_INSTALL_LIBRARY_AS_DATA']]
+    pkgdata['astra'] += ['*.dll']
+else:
+    pkgdata['astra'] = ['*.dll']
 
 cmdclass = {}
 ext_modules = []

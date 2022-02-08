@@ -37,3 +37,10 @@ __pycache__
 /build/linux/ltmain.sh
 /build/linux/src/*
 /build/linux/matlab/*
+
+/bin
+/.vs
+/python/*.lib
+/python/astra/*.dll
+*.user
+/python/astra_toolbox.egg-info
