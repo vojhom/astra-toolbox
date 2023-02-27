@@ -44,3 +44,4 @@ __pycache__
 /python/astra/*.dll
 *.user
 /python/astra_toolbox.egg-info
+venv/
