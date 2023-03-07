@@ -23,7 +23,7 @@ dnl along with the ASTRA Toolbox. If not, see <http://www.gnu.org/licenses/>.
 dnl
 dnl -----------------------------------------------------------------------
 
-AC_INIT(astra, 2.1.0)
+AC_INIT(astra, 2.1.2)
 AC_CONFIG_SRCDIR([Makefile.in])
 LT_INIT([disable-static])
 
@@ -73,11 +73,12 @@ AC_SUBST(HAVEBOOSTUTF)
 AC_SUBST(LIBS_BOOSTUTF)
 
 BOOSTok=yes
-AC_CHECK_HEADER([boost/any.hpp],[],[BOOSTok=no],[])
+dnl AC_CHECK_HEADER([boost/any.hpp],[],[BOOSTok=no],[])
 dnl AC_CHECK_HEADER([boost/thread.hpp],[],[BOOSTok=no],[])
 dnl AC_CHECK_HEADER([boost/bind.hpp],[],[BOOSTok=no],[])
-AC_CHECK_HEADER([boost/static_assert.hpp],[],[BOOSTok=no],[])
-AC_CHECK_HEADER([boost/throw_exception.hpp],[],[BOOSTok=no],[])
+dnl AC_CHECK_HEADER([boost/static_assert.hpp],[],[BOOSTok=no],[])
+dnl AC_CHECK_HEADER([boost/throw_exception.hpp],[],[BOOSTok=no],[])
+AC_CHECK_HEADER([boost/shared_ptr.hpp],[],[BOOSTok=no],[])
 
 if test x$BOOSTok = xno; then
   AC_MSG_ERROR([boost not found])

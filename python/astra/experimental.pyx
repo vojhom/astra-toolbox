@@ -28,6 +28,10 @@
 
 include "config.pxi"
 
+cimport utils
+from .utils import wrap_from_bytes
+from .utils cimport createProjectionGeometry3D
+
 IF HAVE_CUDA==True:
 
     import six
@@ -178,3 +182,11 @@ IF HAVE_CUDA==True:
         :type datatype: :class:`numpy.ndarray` or :class:`astra.data3d.GPULink`
         """
         direct_FPBP3D(projector_id, vol, proj, MODE_SET, "BP")
+
+    def getProjectedBBox(geometry, minx, maxx, miny, maxy, minz, maxz):
+        cdef CProjectionGeometry3D * ppGeometry
+        cdef double minu, maxu, minv, maxv
+        ppGeometry = createProjectionGeometry3D(geometry)
+        ppGeometry.getProjectedBBox(minx, maxx, miny, maxy, minz, maxz, minu, maxu, minv, maxv)
+        del ppGeometry
+        return (minv, maxv)
