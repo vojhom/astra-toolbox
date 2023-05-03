@@ -37,6 +37,7 @@ __pycache__
 /python/dist/
 /python/astra/*.cpp
 /python/astra/*.pxi
+/python/build/
 *.user
 /python/astra_toolbox.egg-info
 venv/
