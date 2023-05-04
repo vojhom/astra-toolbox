@@ -40,4 +40,4 @@ __pycache__
 /python/build/
 *.user
 /python/astra_toolbox.egg-info
-venv/
+venv*/
