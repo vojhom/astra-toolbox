@@ -1,0 +1,1 @@
+msbuild .\astra_vc14.vcxproj /t:Build /p:Configuration=Release_CUDA /p:Platform=x64
