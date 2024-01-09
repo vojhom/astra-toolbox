@@ -60,14 +60,10 @@ along with the ASTRA Toolbox. If not, see <http://www.gnu.org/licenses/>.
 #define ASTRA_TOOLBOXVERSION_MAJOR 2
 #define ASTRA_TOOLBOXVERSION_MINOR 1
 #define ASTRA_TOOLBOXVERSION ((ASTRA_TOOLBOXVERSION_MAJOR)*100 + (ASTRA_TOOLBOXVERSION_MINOR))
-#define ASTRA_TOOLBOXVERSION_STRING "2.1.2"
+#define ASTRA_TOOLBOXVERSION_STRING "2.1.3"
 
 
 #define ASTRA_ASSERT(a) assert(a)
-
-#define ASTRA_CONFIG_CHECK(value, type, msg) if (!(value)) { std::cout << "Configuration Error in " << type << ": " << msg << std::endl; return false; }
-
-#define ASTRA_CONFIG_WARNING(type, msg) { std::cout << "Warning in " << type << ": " << msg << sdt::endl; }
 
 
 #define ASTRA_DELETE(a) if (a) { delete a; a = NULL; }

@@ -29,10 +29,10 @@ import numpy as np
 from setuptools import setup
 from pkg_resources import parse_version
 
+from setuptools import Command
+
 from Cython.Distutils import build_ext
 from Cython.Build import cythonize
-
-from setuptools import Command
 
 import argparse
 import sys
@@ -128,7 +128,7 @@ for m in ext_modules:
 
 setup(script_args=script_args,
       name='astra-toolbox',
-      version='2.1.2',
+      version='2.1.3',
       description='Python interface to the ASTRA Toolbox',
       author='D.M. Pelt',
       author_email='D.M.Pelt@cwi.nl',
